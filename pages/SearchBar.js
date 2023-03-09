@@ -11,7 +11,7 @@ const SearchBar = () => {
 
   const searchMovies = async () => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=fa586b6&s=${searchTerm}`);
+      const response = await axios.get(`http://www.omdbapi.com/?apikey=fa586b6&s=${searchTerm}/`);
       if (response.data.Response === 'True') {
         setResults(response.data.Search);
         setError('');
