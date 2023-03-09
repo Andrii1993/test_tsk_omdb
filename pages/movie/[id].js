@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import styled from './info.module.css';
 import style from '../style.module.css';
 import Link from "next/link";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export async function getServerSideProps(context) {
   const { id } = context.query;
@@ -18,7 +18,7 @@ const MovieDetails = ({ id }) => {
   const [movie, setMovie] = useState({});
 
   const fetchMovieDetails = async () => {
-    const response = await axios.get(`https://www.omdbapi.com/?apikey=fa586b6&i=${id}/`);
+    const response = await axios.get(`https://www.omdbapi.com/?apikey=fa586b6&i=${id}`);
     setMovie(response.data);
   }
 
@@ -28,10 +28,10 @@ const MovieDetails = ({ id }) => {
 
   return (
     <div>
-      <div className={style.header}>
-        <div className={style.container}>
+    <div className={style.header}>
+       <div className={style.container}>
           <div className={style.header_container}>
-            <Link href={`/`}>
+             <Link href={`/`}>
               <svg
                 fill="#000000"
                 width="75px"
@@ -46,7 +46,7 @@ const MovieDetails = ({ id }) => {
           </div>
         </div>
       </div>
-      <div className={styled.page_info}>
+    <div className={styled.page_info}>
         {movie.Poster !== "N/A" ? (
           <img src={movie.Poster} alt={movie.Title} className={styled.page_img}/>
         ) : (
@@ -63,10 +63,9 @@ const MovieDetails = ({ id }) => {
           <p className={styled.runtime}><strong>Runtime: </strong>{movie.Runtime}</p>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 
 export default MovieDetails;
-
 
