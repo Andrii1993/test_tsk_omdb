@@ -1,0 +1,50 @@
+.page_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.page_img {
+    margin-right: 15px;
+}
+
+@media (max-width: 650px) {
+    .page_info {
+        display: block;
+    }
+    .page_img {
+        margin-right: 0;
+    }
+}
+
+.title {
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.plot {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.director {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.actors {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.genre {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.runtime {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
